@@ -12,6 +12,9 @@ import SubjectState from './context/subjects/SubjectState';
 import Alert from './components/Alert';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import SubjectPanel from './components/SubjectPanel'
+import FacultyInfo from './components/FacultyInfo';
+import Meeting from './components/Meeting';
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -35,10 +38,13 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} showAlert={showAlert}/>
                 <Route path="/signup" element={<Signup />} showAlert={showAlert}/>
+                <Route path="/subjects/:subjectName" element={<SubjectPanel />} />
+                {/* <Route path="facultyInfo/:subjectFacultyId" element={<FacultyInfo />} showAlert={showAlert}/> */}
+                <Route path="/meeting" element={<Meeting />} showAlert={showAlert}/>
+                {/* <Route path="/subject-panel/:subject" element={<SubjectPanel />} /> */}
               </Routes>
           </div>
             </BrowserRouter>
-
       </SubjectState>
     </>
   )

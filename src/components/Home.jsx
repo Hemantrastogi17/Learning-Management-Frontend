@@ -13,14 +13,15 @@ const Home = (props) => {
     else{
       navigate('/login')
     }
+    // eslint-disable-next-line
   },[])
   
   const  {showAlert} = props
   return (
-    <div className='row'>
+    <div className='row' >
       <h1 className='text-center mt-4'>Enrolled Subjects</h1>
         {subjects.map((subject) => {
-          return <Subject subject={subject} key={subject.subjectCode} showAlert={props.showAlert}/>
+          return <Subject subject={subject} key={subject.subjectCode} showAlert={showAlert}/>
         })} 
     </div>
   )
