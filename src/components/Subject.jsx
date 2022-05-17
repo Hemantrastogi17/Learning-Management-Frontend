@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 const Subject = (props) => {
     const {subject} = props
-    const link = `/subjects/${subject.subjectName}`
+    const link = `/subjects/${subject.subjectName}/${subject.subjectFacultyId}`
     return (
         <div className='col-md-4 my-4 '>
             <div className="card d-flex justify-content-start" style={{"width": "18rem", "border":"2px solid grey"}}>

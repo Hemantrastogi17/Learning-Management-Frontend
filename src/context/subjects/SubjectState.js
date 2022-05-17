@@ -6,8 +6,7 @@ const SubjectState = (props) => {
     const subjectsInitial = []
     
     const [subjects, setSubjects] = useState(subjectsInitial)
-    const getSubjects = async()=>{
-        
+    const getSubjects = async()=>{   
             const response = await fetch(`${host}/api/subjects/getallsubjects`, {
               method: 'GET', 
               headers: {
@@ -19,8 +18,20 @@ const SubjectState = (props) => {
             console.log(json);
             setSubjects(json)     
     }
+    const getFacultySubjects = async()=>{   
+      const response = await fetch(`${host}/api/subjects/getallsubjectsfaculty`, {
+        method: 'GET', 
+        headers: {
+          'Content-Type': 'application/json',
+          'auth-token' : localStorage.getItem('token')
+        }
+      });
+      const json = await response.json()
+      console.log(json);
+      setSubjects(json)     
+}
     return (
-        <subjectContext.Provider value={{ subjects, getSubjects }}>
+        <subjectContext.Provider value={{ subjects, getSubjects, getFacultySubjects }}>
             {props.children}
         </subjectContext.Provider>
     )

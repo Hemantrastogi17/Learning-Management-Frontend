@@ -8,10 +8,17 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "jws": "^4.0.0",
     "react": "^18.0.0",
+    "react-data-table-component": "^7.5.2",
+    "react-data-table-component-extensions": "^1.6.0",
     "react-dom": "^18.0.0",
     "react-jitsi": "^1.0.4",
+    "react-jwt": "^1.1.6",
     "react-scripts": "5.0.1",
+    "react-top-loading-bar": "^2.1.0",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

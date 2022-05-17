@@ -1,6 +1,7 @@
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  max-width: 1400px;
+  max-width: 1100px;
 } 
+
 div,li,h1{
   font-family: 'Oleo Script Swash Caps', cursive;
   font-weight: 800;
@@ -12,7 +13,6 @@ div,li,h1{
   border-left: 3px solid green;
   height: 1000px;
 }
-
 
 
 body {
@@ -44,14 +44,14 @@ body {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: #f1f1f1;
   display: block;
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+/* .overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
-}
+} */
 
 .overlay .closebtn {
   position: absolute;
